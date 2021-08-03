@@ -1,0 +1,1201 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.europarl.europa.eu/ontology/ep-bibres#"
+     xml:base="http://www.europarl.europa.eu/ontology/ep-bibres"
+     xmlns:at="http://publications.europa.eu/ontology/authority/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:atold="http://publications.europa.eu/resource/authority/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:frbroo="http://iflastandards.info/ns/fr/frbr/frbroo/"
+     xmlns:cidoc-crm="http://www.cidoc-crm.org/cidoc-crm/"
+     xmlns:ep-bibres="http://data.europarl.europa.eu/ontology/ep-bibres#">
+    <owl:Ontology rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#">
+        <owl:versionIRI rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres/0.2#"/>
+        <owl:imports rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <owl:imports rdf:resource="http://purl.org/ontology/bibo/"/>
+        <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#format -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#format">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Manifestation"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Format"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasAddon -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasAddon">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentAddon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasAgenda -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasAgenda">
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasAmendment -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasAmendment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasAspect -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasAspect">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isReflectedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasDossier -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasDossier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasExpressionAspect -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasExpressionAspect">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#hasAspect"/>
+        <owl:inverseOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isExpressionReflectedIn"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Document"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasItemAspect -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasItemAspect">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#hasAspect"/>
+        <owl:inverseOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isItemReflectedIn"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Document"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasManifestationAspect -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasManifestationAspect">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#hasAspect"/>
+        <owl:inverseOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isManifestationReflectedIn"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Document"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Manifestation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasProcedure -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasProcedure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#hasWorkAspect -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#hasWorkAspect">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#hasAspect"/>
+        <owl:inverseOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isWorkReflectedIn"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Document"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isEmbodiedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isEmbodiedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isEmbodimentOf"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Expression"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Manifestation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isEmbodimentOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isEmbodimentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isExemplarOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isExemplarOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isExemplifiedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isExemplifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isExemplifiedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Manifestation"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isExpressionReflectedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isExpressionReflectedIn">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isReflectedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isItemReflectedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isItemReflectedIn">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isReflectedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isManifestationReflectedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isManifestationReflectedIn">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isReflectedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isRealizationOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isRealizationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isRealizedThrough"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isRealizedThrough -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isRealizedThrough">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isReflectedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isReflectedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#isWorkReflectedIn -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#isWorkReflectedIn">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#isReflectedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#language -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#language">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/language"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Expression"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#originalLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#originalLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/language"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#referenceReading -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#referenceReading">
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentReferenceReading"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#status -->
+
+    <owl:ObjectProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#status">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/status"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#authority -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#authority">
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#dateCommitteeAdoption -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#dateCommitteeAdoption">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#dateCreation -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#dateCreation">
+        <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/created"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Creation date of a reference in Redmap (technical information)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#dateDocument -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#dateDocument">
+        <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/issued"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date of a document (usually found on a cover page)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#displayReference -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#displayReference">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#identifier">
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#legalBasis -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#legalBasis">
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#parliamentaryTerm -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#parliamentaryTerm">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#rapporteur -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#rapporteur">
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#reference -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#reference">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#identifier"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#referenceAlias.fdr -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#referenceAlias.fdr">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#identifier"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasEpNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasEpNumber">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#identifier"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasEpNumberWithVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasEpNumberWithVersion">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#identifier"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasEpRegisterReference -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasEpRegisterReference">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#identifier"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasFdr -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasFdr">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#identifier"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasNuPeWithVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#referenceAliasNuPeWithVersion">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#identifier"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#referenceDate -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#referenceDate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#titleMain -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#titleMain">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Expression"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#titleShort -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#titleShort">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#titleUniform -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#titleUniform">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#type -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Redmap type</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#uri -->
+
+    <owl:DatatypeProperty rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#uri">
+        <rdfs:subPropertyOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#identifier"/>
+        <rdfs:domain rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocument -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocument">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentExpression -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentExpression">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentItem -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentItem">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentManifestation -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentManifestation">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Work"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportItem -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportItem">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportManifestation -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportManifestation">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentManifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork">
+        <rdfs:subClassOf rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDocumentWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#Document -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#Document">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#DocumentAddon -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentAddon"/>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#DocumentReferenceReading -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentReferenceReading"/>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#DocumentStatus -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentStatus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#Expression -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#Expression">
+        <rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#Format -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#Format">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="http://purl.org/dc/terms/MediaType"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#Item -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#Item">
+        <rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F5_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#Language -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#Language">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/language"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#Manifestation -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#Manifestation">
+        <rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres#Work -->
+
+    <owl:Class rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres#Work">
+        <rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_AMD -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_AMD">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentAddon"/>
+        <rdfs:comment>Element informing the availability of amendment.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_ASW -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_ASW">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentAddon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_ERR -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_ERR">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentAddon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_FNL-COR -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_FNL-COR">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentAddon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_PRV-COR -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_PRV-COR">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentAddon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_SUM -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/hasAddon#Addon_SUM">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentAddon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/referenceReading#Reading_I -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/referenceReading#Reading_I">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentReferenceReading"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/referenceReading#Reading_II -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/referenceReading#Reading_II">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentReferenceReading"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/referenceReading#Reading_III -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/referenceReading#Reading_III">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentReferenceReading"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/status#Status_ACTIVE -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/status#Status_ACTIVE">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/status#Status_DELETED -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/status#Status_DELETED">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/status#Status_ENDED -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/status#Status_ENDED">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/ontology/ep-bibres/status#Status_OBSOLETE -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/ontology/ep-bibres/status#Status_OBSOLETE">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#DocumentStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077 -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport"/>
+        <ep-bibres:hasExpressionAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/E"/>
+        <ep-bibres:hasManifestationAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/M"/>
+        <ep-bibres:hasWorkAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/E -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/E"/>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/M -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/M"/>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/W -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/W">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport"/>
+        <ep-bibres:hasExpressionAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/E"/>
+        <ep-bibres:hasManifestationAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/M"/>
+        <ep-bibres:hasWorkAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport"/>
+        <ep-bibres:hasWorkAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/E -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/E">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/E"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/M -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/M"/>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/W -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/W">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport"/>
+        <ep-bibres:hasExpressionAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/E"/>
+        <ep-bibres:hasManifestationAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/M"/>
+        <ep-bibres:hasWorkAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport"/>
+        <ep-bibres:hasExpressionAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/E"/>
+        <ep-bibres:hasManifestationAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/M"/>
+        <ep-bibres:hasWorkAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport"/>
+        <ep-bibres:hasExpressionAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/E"/>
+        <ep-bibres:hasManifestationAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/M"/>
+        <ep-bibres:hasWorkAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/E -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/E">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/E"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/M -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/M">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportManifestation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/W -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/html/W">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/E -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/E">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/E"/>
+        <ep-bibres:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <ep-bibres:titleMain rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">DRAFT REPORT on the 2019-2020 Commission Reports on Montenegro</ep-bibres:titleMain>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/M -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/M">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportManifestation"/>
+        <ep-bibres:format rdf:resource="http://purl.org/dc/terms/MediaType/application/pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/W -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/pdf/W">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/W"/>
+        <ep-bibres:originalLanguage rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <ep-bibres:status rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres/status#Status_ACTIVE"/>
+        <ep-bibres:dateCreation rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T11:08:20.55</ep-bibres:dateCreation>
+        <ep-bibres:displayReference rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">AFET_PR-647077</ep-bibres:displayReference>
+        <ep-bibres:titleShort>AFET_PR-647077</ep-bibres:titleShort>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/E -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/E">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/M -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/M">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportManifestation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/W -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/en/xml/W">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/E -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/E">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/E"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/W -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/W">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport"/>
+        <ep-bibres:hasExpressionAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/E"/>
+        <ep-bibres:hasManifestationAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/M"/>
+        <ep-bibres:hasWorkAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport"/>
+        <ep-bibres:hasExpressionAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/E"/>
+        <ep-bibres:hasManifestationAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/M"/>
+        <ep-bibres:hasWorkAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReport"/>
+        <ep-bibres:hasExpressionAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/E"/>
+        <ep-bibres:hasManifestationAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/M"/>
+        <ep-bibres:hasWorkAspect rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/E -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/E">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/E"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/M -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/M">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportManifestation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/W -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/html/W">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/E -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/E">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/E"/>
+        <ep-bibres:language rdf:resource="http://publications.europa.eu/resource/authority/language/FRA"/>
+        <ep-bibres:titleMain rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Rapport sur les rapports 2019-2020 de la Commission sur le Monténégro</ep-bibres:titleMain>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/M -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/M">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportManifestation"/>
+        <ep-bibres:format rdf:resource="http://purl.org/dc/terms/MediaType/application/pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/W -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/pdf/W">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork"/>
+        <owl:sameAs rdf:resource="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/W"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/E -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/E">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportExpression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/M -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/M">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportManifestation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/W -->
+
+    <owl:NamedIndividual rdf:about="http://data.europarl.europa.eu/reds_iCmRp-Dft/AFET-PR-647077/fr/xml/W">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#CommitteeDraftReportWork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://publications.europa.eu/resource/authority/language -->
+
+    <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/language">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://publications.europa.eu/resource/authority/language/ENG -->
+
+    <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/language/ENG">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://publications.europa.eu/resource/authority/language/FRA -->
+
+    <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/language/FRA">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/MediaType -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MediaType">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/MediaType/application/pdf -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MediaType/application/pdf">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/MediaType/application/xhtml+xml -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MediaType/application/xhtml+xml">
+        <rdf:type rdf:resource="http://data.europarl.europa.eu/ontology/ep-bibres#Format"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
